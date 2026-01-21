@@ -11,7 +11,7 @@ const projects = [
         description: "A budgeting app keeps track of your spending and delivers insights that help improve your financial awareness. Convenience. Offering automated tracking, easy access from your mobile device and other features, budgeting apps simplify your finances.",
         alignment: "left", // Image left, text right
         link: "#", // User to update
-        image: "budget-app.png" // User to update path, e.g., "/projects/budget.jpg"
+        image: "src/components/budget-app.png" // User to update path, e.g., "/projects/budget.jpg"
     },
     {
         id: 2,
