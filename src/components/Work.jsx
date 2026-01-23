@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import budgetAppImg from '../assets/budget_app.png';
 
 const projects = [
     {
@@ -11,7 +12,7 @@ const projects = [
         description: "A budgeting app keeps track of your spending and delivers insights that help improve your financial awareness. Convenience. Offering automated tracking, easy access from your mobile device and other features, budgeting apps simplify your finances.",
         alignment: "left", // Image left, text right
         link: "#", // User to update
-        image: "src/assets/budget-app.png" // User to update path, e.g., "/projects/budget.jpg"
+        image: budgetAppImg // User to update path, e.g., "/projects/budget.jpg"
     },
     {
         id: 2,
