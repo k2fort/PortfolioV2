@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import budgetAppImg from '../assets/budget-app.png';
+import budgetAppImg from '../assets/budget_app.png';
 
 const projects = [
     {
