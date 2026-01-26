@@ -24,12 +24,31 @@ const Hero = () => {
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="max-w-4xl">
+                <motion.div
+                    className="max-w-4xl"
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: {
+                                staggerChildren: 0.2,
+                                delayChildren: 0.1
+                            }
+                        }
+                    }}
+                >
                     {/* Status Kicker */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
+                        variants={{
+                            hidden: { opacity: 0, x: -30 },
+                            visible: {
+                                opacity: 1,
+                                x: 0,
+                                transition: { duration: 0.6, ease: "easeOut" }
+                            }
+                        }}
                         className="flex items-center gap-3 mb-6"
                     >
                         <span className="relative flex h-3 w-3">
@@ -43,9 +62,15 @@ const Hero = () => {
 
                     {/* Name Headline */}
                     <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                        variants={{
+                            hidden: { opacity: 0, scale: 0.95, filter: "blur(10px)" },
+                            visible: {
+                                opacity: 1,
+                                scale: 1,
+                                filter: "blur(0px)",
+                                transition: { duration: 0.8, ease: [0.2, 0.65, 0.3, 0.9] }
+                            }
+                        }}
                         className="font-display font-bold text-7xl md:text-9xl tracking-tighter text-white mb-6 leading-[1.1]"
                     >
                         <span className="bg-lime-400 text-black px-4 box-decoration-clone">
@@ -55,9 +80,14 @@ const Hero = () => {
 
                     {/* Subtext */}
                     <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: { duration: 0.8, ease: "easeOut" }
+                            }
+                        }}
                         className="text-neutral-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed font-sans"
                     >
                         Helping founders launch faster, convert better, and automate smarter through premium web design and custom AI workflows.
@@ -65,9 +95,14 @@ const Hero = () => {
 
                     {/* Actions */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.6 }}
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: { type: "spring", stiffness: 200, damping: 20 }
+                            }
+                        }}
                         className="flex flex-wrap items-center gap-4"
                     >
                         {/* Scroll Down Arrow */}
@@ -87,7 +122,7 @@ const Hero = () => {
                             CONTACT ME
                         </Button>
                     </motion.div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

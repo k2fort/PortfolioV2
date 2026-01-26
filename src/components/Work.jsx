@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import budgetAppImg from '../assets/budget_app.png';
+import petShopImg from '../assets/petshop_web.png';
 
 const projects = [
     {
@@ -16,13 +17,13 @@ const projects = [
     },
     {
         id: 2,
-        title: "SOON",
-        category: "SOON",
+        title: "Pet Shop Website",
+        category: "Webshop",
         year: "2026",
-        description: "SOON.",
+        description: "A pet shop is a specialized retail store offering a wide range of products for pets, including food, treats, toys, collars, cages, and aquariums.",
         alignment: "right", // Text left, image right
         link: "#", // User to update
-        image: "" // User to update path
+        image: petShopImg // User to update path
     }
 ];
 
