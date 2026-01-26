@@ -14,6 +14,7 @@ const projects = [
         alignment: "left", // Image left, text right
         link: "#", // User to update
         image: budgetAppImg // User to update path, e.g., "/projects/budget.jpg"
+        image: budgetAppImg // User to update path, e.g., "/projects/budget.jpg"
     },
     {
         id: 2,
