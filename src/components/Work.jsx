@@ -24,6 +24,16 @@ const projects = [
         alignment: "right", // Text left, image right
         link: "#", // User to update
         image: petShopImg // User to update path
+    },
+    {
+        id: 3,
+        title: "SOON",
+        category: "SOON",
+        year: "SOON",
+        description: "SOON.",
+        alignment: "left", // Text left, image right
+        link: "#", // User to update
+        image: "" // User to update path
     }
 ];
 
